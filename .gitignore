@@ -1,0 +1,4 @@
+*.md
+!memo.md
+*.pdf
+a.out
