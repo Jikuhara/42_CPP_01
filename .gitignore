@@ -2,3 +2,4 @@
 !memo.md
 *.pdf
 a.out
+obj/

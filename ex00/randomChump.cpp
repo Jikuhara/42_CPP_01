@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/06 00:20:05 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/07/06 00:24:47 by kei2003730       ###   ########.fr       */
+/*   Created: 2025/07/06 00:15:05 by kei2003730        #+#    #+#             */
+/*   Updated: 2025/07/06 00:15:17 by kei2003730       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main(void)
+void	randomChump(std::string name)
 {
-	std::cout << "=== Testing randomChump (Stack allocation) ===" << std::endl;
-	randomChump("StackZombie");
-	std::cout << "\n=== Testing newZombie (Heap allocation) ===" << std::endl;
-	Zombie* heapZombie = newZombie("HeapZombie");
-	heapZombie->announce();
-	delete heapZombie;
-	return 0;
+	Zombie zombie(name);
+	zombie.announce();
 }

@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/06 00:20:05 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/07/06 00:24:47 by kei2003730       ###   ########.fr       */
+/*   Created: 2025/07/06 00:11:07 by kei2003730        #+#    #+#             */
+/*   Updated: 2025/07/06 00:13:55 by kei2003730       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-int main(void)
+# include <iostream>
+# include <string>
+
+class	Zombie
 {
-	std::cout << "=== Testing randomChump (Stack allocation) ===" << std::endl;
-	randomChump("StackZombie");
-	std::cout << "\n=== Testing newZombie (Heap allocation) ===" << std::endl;
-	Zombie* heapZombie = newZombie("HeapZombie");
-	heapZombie->announce();
-	delete heapZombie;
-	return 0;
-}
+	private:
+		std::string name;
+
+	public:
+		Zombie(std::string zombieName);
+		~Zombie();
+		void announce(void);
+};
+
+Zombie*	newZombie(std::string name);
+void	randomChump(std::string name);
+
+#endif
