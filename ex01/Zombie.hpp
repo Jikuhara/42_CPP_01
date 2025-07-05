@@ -6,7 +6,7 @@
 /*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 00:11:07 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/07/06 00:13:55 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/07/06 00:59:11 by kei2003730       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	Zombie
 		std::string name;
 
 	public:
-		Zombie(std::string zombieName);
+		Zombie();
 		~Zombie();
 		void announce(void);
 };
