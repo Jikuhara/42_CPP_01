@@ -35,3 +35,19 @@ setType()は、仮引数追加して良いのか？
 3. HumanBクラスを実装
 	1. コンストラクタでWeaponを受け取らない
 	2. `attack()`メソッドを実装
+
+定数参照がわかんね～～。
+const std::string& なのか、
+std::string const& なのか。
+どっちでも良いのか？
+
+[C++の基礎:関数のconst参照について学ぶ](https://docwiki.embarcadero.com/Support/ja/C%2B%2B%E3%81%AE%E5%9F%BA%E7%A4%8E:%E9%96%A2%E6%95%B0%E3%81%AEconst%E5%8F%82%E7%85%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E5%AD%A6%E3%81%B6)
+めっちゃ分かりやすいこれ。
+
+const std::string&っぽい。
+差異はあるのか？？
+ってか、これ差異無さそうちゃう？
+std::string& constはありそうで無い。
+→そもそも再代入が禁止されているかららしい。
+→確かに、再代入したらどこに代入するか分からんしなぁ。
+→うーん、けど微妙に負に落ちない。まあいっか。
