@@ -1,5 +1,5 @@
 # CPP01
-## ex01
+## ex02
 [ゼロから学ぶCPP-ポインタと参照](https://rinatz.github.io/cpp-book/ch02-04-pointers-and-references/)
 まじめっちゃわかりやすいこのサイト。
 
