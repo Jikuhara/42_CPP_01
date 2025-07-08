@@ -245,3 +245,46 @@ Inputのファイルサイズ書いてないの不親切すぎんか。。。
 てか全部くっつけるならわざわざgetline使わんでも良さそう。
 他のやり方無いんかなぁ。
 とりあえずバカデカファイルのときは考えずに作るか。
+
+これ改行どうやって捉えたら良いんやろ。
+改行マタギは別の文字なんかな。sedの再実装的な課題やからsedの挙動に合わせるでええか。
+```shell
+kei2003730@JikuPC ~/A/c/4/ex04 (main)> sed 's/world/super/g' test.txt
+Hello super
+Hello wor
+ld
+testtesttest
+```
+
+```txt
+Hello world
+Hello wor
+ld
+testtesttest
+```
+こんな感じで置換される。
+改行は無視して、置換対象の文字列があったら置換する感じか。
+これめっちゃありがたいな～～～！
+
+
+よしあとは、置換機構を作るだけやな。
+std::stringを漁ろう。
+
+### 置換機構
+std::stringのメンバ関数に、findがあるからそれ使えば行けそう。
+[参考元：cpprefjpの文字列色々](https://cpprefjp.github.io/reference/string/basic_string.html)
+findの返り値気になる。
+とりあえず、１行に対して、
+前＋置換対象＋後 → 前＋置換後文字列＋後
+に変換すれば行けそう。
+stringってサイズ上限ないんかな。
+置換後文字列に置換対象が入ってると無限ループしそうやなこれ。
+「後」だけを、次回の入力にすればいいんかな。
+
+[Findに関して](https://cpprefjp.github.io/reference/string/basic_string/find.html)
+これの例が結構いい感じ。
+posを返すのね～。
+
+Ncopy欲しい。探そ。
+[Copyに関して](https://cpprefjp.github.io/reference/string/basic_string/copy.html)
+普通に引数にN突っ込んだらできるんや～。

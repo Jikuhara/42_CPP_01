@@ -6,12 +6,19 @@
 /*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 01:36:25 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/07/08 13:42:10 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/07/08 14:02:16 by kei2003730       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
+
+int replace_string(std::string str, std::string src, std::string dst)
+{
+	int search_pos = 0;
+	str.find(src, search_pos);
+	std::string ahead_str = str
+}
 
 int main(int argc, char const *argv[])
 {
@@ -25,9 +32,13 @@ int main(int argc, char const *argv[])
 	std::fstream old_file(old_filename, std::ios_base::in);
 	std::fstream new_file(new_filename, std::ios_base::out);
 
+	std::string old_string;
 	std::string line;
-	getline(old_file, line);
-	new_file << line << std::endl;
+	while(getline(old_file, line))
+	{
+		old_string += line + '\n';
+	}
+	new_file << old_string << std::endl;
 	return 0;
 }
 
