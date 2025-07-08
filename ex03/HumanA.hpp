@@ -6,7 +6,7 @@
 /*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 12:00:32 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/07/06 12:13:08 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/07/08 11:57:57 by kei2003730       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class HumanA
 {
 	private:
-		Weapon		weapon;
-		std::string	name;
+		const Weapon&		weapon;
+		std::string			name;
 	public:
 		HumanA(std::string humanName, const Weapon& newWeapon);
 		void		attack();

@@ -6,7 +6,7 @@
 /*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 11:52:40 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/07/06 12:17:47 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/07/08 12:09:15 by kei2003730       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Weapon::Weapon(const std::string& newType)
 	type = newType;
 }
 
-const	std::string&	Weapon::getType()
+const	std::string&	Weapon::getType() const
 {
 	return (this->type);
 }
