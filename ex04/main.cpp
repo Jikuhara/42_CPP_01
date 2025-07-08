@@ -6,7 +6,7 @@
 /*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 01:36:25 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/07/08 15:01:04 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/07/08 15:02:56 by kei2003730       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int main(int argc, char const *argv[])
 		new_line = replace_string(line, argv[2], argv[3]);
 		old_string += new_line + '\n';
 	}
+	old_string.pop_back();
 	new_file << old_string << std::endl;
 	return 0;
 }
