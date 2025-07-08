@@ -123,3 +123,46 @@ ios_base::in | ios_base::outは、ios_baseの中のinとoutをビット演算で
 int | intみたいなことやろ？？
 
 まあけど次調べるべきはios_baseクラスの中身か。
+![発見した]({AB713994-8EC9-49AC-B495-E1F0580731D8}.png)
+長すぎて読む気にならん。
+
+```cpp
+  enum _Ios_Openmode 
+    { 
+      _S_app 		= 1L << 0,
+      _S_ate 		= 1L << 1,
+      _S_bin 		= 1L << 2,
+      _S_in 		= 1L << 3,
+      _S_out 		= 1L << 4,
+      _S_trunc 		= 1L << 5,
+      _S_noreplace 	= 1L << 6,
+      _S_ios_openmode_end = 1L << 16,
+      _S_ios_openmode_max = __INT_MAX__,
+      _S_ios_openmode_min = ~__INT_MAX__
+    };
+```
+ぽいやつ発見。
+多分、ios_base::inとかios_base::outとかは、普通に数字。マクロなのかな。
+```cpp
+    /// Open for input.  Default for @c ifstream and fstream.
+    static const openmode in =		_S_in;
+```
+これでしょ！！！
+
+openはこれぐらいで良さそう。
+まあ返り値はまた今度調べよ。
+
+### 読み取り
+次は読み取り調べたい。
+どうやってOpenしたやつを呼び出すのか。
+```cpp
+    fs << a << " " << b << " " << c << std::endl;
+```
+[引用元：これの例](https://cpprefjp.github.io/reference/fstream/basic_fstream.html)
+めっちゃ簡単やん！！
+たしかに、Write関数とかCPPでなかったしなぁ。
+これの逆で読み取り行けそう。
+
+これで書き込み読み取りは両方できそう。
+
+あとは新しいファイルをどうやって作るか、か。
