@@ -288,3 +288,6 @@ posを返すのね～。
 Ncopy欲しい。探そ。
 [Copyに関して](https://cpprefjp.github.io/reference/string/basic_string/copy.html)
 普通に引数にN突っ込んだらできるんや～。
+copyがchar *しか扱えへんくてメチャ面倒。
+なんとかならんかな。
+char *からstringに変換して、appendするのが良いんかな。

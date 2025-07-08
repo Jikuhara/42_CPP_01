@@ -6,7 +6,7 @@
 /*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 01:36:25 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/07/08 14:02:16 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/07/08 14:10:20 by kei2003730       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,11 @@
 int replace_string(std::string str, std::string src, std::string dst)
 {
 	int search_pos = 0;
-	str.find(src, search_pos);
-	std::string ahead_str = str
+	search_pos = str.find(src, search_pos);
+	char* ahead_chars;
+	str.copy(ahead_chars, search_pos);
+	std::string ahead_str(ahead_chars);
+	ahead_str.append();
 }
 
 int main(int argc, char const *argv[])
