@@ -166,3 +166,37 @@ openはこれぐらいで良さそう。
 これで書き込み読み取りは両方できそう。
 
 あとは新しいファイルをどうやって作るか、か。
+
+### ファイルの作成
+どうせfstreamにありそう。調べる。
+わかんね、関数は無い。
+
+```cpp
+#include <fstream>
+#include <iostream>
+#include <string>
+
+int main() {
+  // example.txtファイルを読み取り専用で開く
+  std::ifstream ifs("example.txt");
+  if (!ifs.is_open()) {
+    std::cerr << "ファイルを開けませんでした" << std::endl;
+    return 1;
+  }
+
+  // ファイルの内容を1行ずつ読み取り、出力する
+  std::string line;
+  while (std::getline(ifs, line)) {
+    std::cout << line << std::endl;
+  }
+
+  // ファイルを閉じる (デストラクタでも自動的に閉じられる)
+  ifs.close();
+}
+```
+[引用元：これの例](https://cpprefjp.github.io/reference/fstream/basic_ifstream.html)
+
+これデストラクタのお陰でクローズせんでええんか。激アツやん。
+型宣言時にいきなり引数に代入で初期化できるのもすごい。
+
+

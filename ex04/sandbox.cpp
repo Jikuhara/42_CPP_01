@@ -6,7 +6,7 @@
 /*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 12:41:55 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/07/08 13:09:47 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/07/08 13:17:45 by kei2003730       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main(int argc, char const *argv[])
 	// }
 	std::fstream s1;
 	s1.open("test.txt", std::ios_base::in | std::ios_base::out);
+	s1 << "test input" << std::endl;
 	return 0;
 }
 
