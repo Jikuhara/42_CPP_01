@@ -6,7 +6,7 @@
 /*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 01:36:25 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/07/08 14:10:20 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/07/08 14:25:15 by kei2003730       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int replace_string(std::string str, std::string src, std::string dst)
 	char* ahead_chars;
 	str.copy(ahead_chars, search_pos);
 	std::string ahead_str(ahead_chars);
-	ahead_str.append();
+	/* もうちょいきれいに実装できそう */
+	ahead_str.append(str, );
 }
 
 int main(int argc, char const *argv[])
@@ -37,6 +38,7 @@ int main(int argc, char const *argv[])
 
 	std::string old_string;
 	std::string line;
+	/* 改行が一つ多くなってしまう。。 */
 	while(getline(old_file, line))
 	{
 		old_string += line + '\n';
