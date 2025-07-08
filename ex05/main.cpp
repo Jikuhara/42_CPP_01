@@ -6,14 +6,16 @@
 /*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 01:36:25 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/07/08 15:13:12 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/07/08 15:27:14 by kei2003730       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main(int argc, char const *argv[])
+int main(void)
 {
+	Harl	harl;
+	harl.complain("DEBUG");
 	return 0;
 }
 
